@@ -6,8 +6,13 @@ const InfoCard = () => {
     <div>
       <Container fluid>
         <Row>
-          <Col style={{ paddingLeft: '10vh', paddingRight: '10vh' }}>
-            <Card className='shadow'>
+          <Col
+            style={{
+              paddingLeft: '12vh',
+              paddingRight: '12vh',
+            }}
+          >
+            <Card className='shadow-sm'>
               <Card.Body>
                 <Card.Title>
                   <strong>Questions will be typed here</strong>

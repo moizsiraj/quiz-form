@@ -18,7 +18,7 @@ const Header = () => {
               <Col>
                 <div className='float-right buttons'>
                   <Button
-                    className='px-3 py-1 m-3'
+                    className='px-3 py-1 m-2'
                     size='lg'
                     variant='dark'
                     type='submit'
@@ -27,7 +27,9 @@ const Header = () => {
                     Save
                   </Button>
                   <Button
-                    className='px-3 py-1 m-3'
+                    className='px-3 py-1 m-2      
+                    5
+                    \'
                     size='lg'
                     variant='dark'
                     type='submit'

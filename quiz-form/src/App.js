@@ -1,10 +1,16 @@
 import './App.css';
 import Header from './components/Header';
-import InfoCard from './components/InfoCard';
+import Question from './components/Question';
+
 function App() {
   return (
     <>
-      <Header />
+      <div>
+        <Header />
+      </div>
+      <div>
+        <Question />
+      </div>
     </>
   );
 }
