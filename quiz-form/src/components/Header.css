@@ -1,0 +1,21 @@
+.back {
+  background-color: #eaeaea;
+  min-height: 20vh;
+}
+
+.welcome {
+  min-height: 10vh;
+}
+
+.items {
+  padding-top: 5vh;
+}
+
+h1 {
+  color: #868680;
+  padding-left: 10vh;
+}
+
+.buttons {
+  padding-right: 10vh;
+}
