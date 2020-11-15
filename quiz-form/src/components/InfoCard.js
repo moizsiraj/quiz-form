@@ -12,7 +12,7 @@ const InfoCard = () => {
               paddingRight: '12vh',
             }}
           >
-            <Card className='shadow-sm'>
+            <Card className='shadow-sm px-0'>
               <Card.Body>
                 <Card.Title>
                   <strong>Questions will be typed here</strong>
