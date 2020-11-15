@@ -2,16 +2,6 @@
   font-size: medium;
 }
 
-a {
-  font-size: small;
-}
-
-::placeholder {
-  /* Most modern browsers support this now. */
-  color: #000000;
-  font-weight: bold;
-}
-
 .card {
   padding-right: 10vh;
   padding-left: 10vh;

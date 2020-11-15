@@ -1,0 +1,18 @@
+* {
+  font-size: medium;
+}
+
+span {
+  font-size: small;
+}
+
+.sub {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #000000;
+  font-weight: bold;
+}

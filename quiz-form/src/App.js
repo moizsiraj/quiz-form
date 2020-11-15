@@ -5,7 +5,7 @@ import { React, useState } from 'react';
 import InfoCard from './components/InfoCard';
 
 function App() {
-  var count = 1;
+  var count = 0;
   const [noOfQuestions, setQuestion] = useState([count]);
 
   const increaseQuestion = () => {
