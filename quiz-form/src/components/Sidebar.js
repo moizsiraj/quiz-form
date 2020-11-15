@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import './Sidebar.css';
 
-const Sidebar = ({ increaseQuestion }) => {
+const Sidebar = ({ increaseQuestion, question, deleteQuestion }) => {
   return (
     <div className='bgroup'>
       <span>
@@ -27,6 +27,9 @@ const Sidebar = ({ increaseQuestion }) => {
           className='shadow'
           variant='light'
           type='button'
+          onClick={() => {
+            deleteQuestion(question);
+          }}
           style={{
             display: 'inline-block',
             borderRadius: '50%',

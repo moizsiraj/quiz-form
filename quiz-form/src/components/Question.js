@@ -3,7 +3,7 @@ import { Form, Container, Row, Col } from 'react-bootstrap';
 import './InfoCard.css';
 import Sidebar from './Sidebar';
 
-const Question = ({ increaseQuestion, question }) => {
+const Question = ({ increaseQuestion, questionNumber, deleteQuestion }) => {
   return (
     <div
       className='d-flex'
@@ -61,7 +61,11 @@ const Question = ({ increaseQuestion, question }) => {
           </Col>{' '}
         </Row>
       </Container>
-      <Sidebar increaseQuestion={increaseQuestion} />
+      <Sidebar
+        increaseQuestion={increaseQuestion}
+        question={questionNumber}
+        deleteQuestion={deleteQuestion}
+      />
     </div>
   );
 };
