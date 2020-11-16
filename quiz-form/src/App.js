@@ -28,10 +28,7 @@ function App() {
       <div>
         <Header />
       </div>
-      <div
-        className='position-absolute'
-        style={{ top: '15vh', width: '100%', marginBottom: '2vh' }}
-      >
+      <div className='info'>
         <InfoCard />
       </div>
       <div className='flex-fill'>

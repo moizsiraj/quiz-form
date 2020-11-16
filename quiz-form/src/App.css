@@ -1,0 +1,13 @@
+.info {
+  top: 15vh;
+  width: 100%;
+  margin-bottom: 2vh;
+  position: absolute;
+}
+
+@media only screen and (max-width: 800px) {
+  .info {
+    top: 22vh;
+    margin-bottom: 4vh;
+  }
+}

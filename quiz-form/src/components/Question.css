@@ -2,6 +2,13 @@
   font-size: medium;
 }
 
+.question {
+  width: 100%;
+  justify-content: space-evenly;
+  padding-right: 7vh;
+  margin-top: 2vh;
+}
+
 span {
   font-size: small;
 }
@@ -15,4 +22,11 @@ span {
   /* Most modern browsers support this now. */
   color: #000000;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+  .question {
+    padding-right: 7vh;
+    margin-top: 7vh;
+  }
 }

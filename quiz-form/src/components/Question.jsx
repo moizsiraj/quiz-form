@@ -15,6 +15,17 @@ const Question = ({ increaseQuestion, questionNumber, deleteQuestion }) => {
     IncreaseOptions(noOfOptions.concat([count]));
   };
 
+  var countCb = 0;
+  const [noOfOptionsCb, IncreaseOptionsCb] = useState([countCb]);
+
+  const addOptionCb = () => {
+    let current = noOfOptionsCb.length - 1;
+    console.log('chaling');
+    count = noOfOptionsCb[current];
+    count++;
+    IncreaseOptionsCb(noOfOptionsCb.concat([count]));
+  };
+
   var value = 'Multiple Choice';
   const [questionType, QuestionType] = useState(value);
 
@@ -23,15 +34,7 @@ const Question = ({ increaseQuestion, questionNumber, deleteQuestion }) => {
   };
 
   return (
-    <div
-      className='d-flex'
-      style={{
-        width: '100%',
-        justifyContent: 'space-evenly',
-        paddingRight: '7vh',
-        marginTop: '2vh',
-      }}
-    >
+    <div className='d-flex question'>
       <Container fluid className='flex-fill'>
         <Row>
           <Col style={{ paddingLeft: '12vh', paddingRight: '0vh' }}>
@@ -134,7 +137,66 @@ const Question = ({ increaseQuestion, questionNumber, deleteQuestion }) => {
                   </Form.Row>
                 </div>
               ) : (
-                <div>to be added</div>
+                <div>
+                  <Form.Row className='px-3 pb-3'>
+                    <Col xs={2}>
+                      <Form.Control
+                        as='select'
+                        defaultValue='Check Box'
+                        size='lg'
+                        onChange={(e) => changeQuestionType(e.target.value)}
+                      >
+                        <option>Short Answer</option>
+                        <option>Paragraph</option>
+                        <option>Multiple Choice</option>
+                        <option>Check Boxes</option>
+                      </Form.Control>
+                    </Col>
+                    <Col></Col>
+                    <Col>
+                      <div>
+                        <input className='form-control' type='checkbox' />
+                      </div>
+                    </Col>
+                    <Col></Col>
+                    <Col xs={9}>
+                      <Form.Control
+                        size='lg'
+                        type='text'
+                        placeholder='option'
+                      />
+                    </Col>
+                  </Form.Row>
+
+                  {noOfOptionsCb.map((optionCb) => (
+                    <Form.Row className='px-3 pb-3' key={optionCb}>
+                      <Col xs={2}></Col>
+                      <Col></Col>
+                      <Col>
+                        <div>
+                          <input className='form-control' type='checkbox' />
+                        </div>
+                      </Col>
+                      <Col></Col>
+                      <Col xs={9}>
+                        <Form.Control
+                          size='lg'
+                          type='text'
+                          placeholder='option'
+                        />
+                      </Col>
+                    </Form.Row>
+                  ))}
+
+                  <Form.Row>
+                    <Col></Col>
+                    <Col xs={9} className='pl-4 f-xs'>
+                      <span className='sub' onClick={addOptionCb}>
+                        Add Option
+                      </span>
+                    </Col>
+                  </Form.Row>
+                </div>
               )}
             </Form>
           </Col>{' '}

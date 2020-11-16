@@ -17,3 +17,16 @@ h1 {
 .buttons {
   padding-right: 10vh;
 }
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    color: #868680;
+    padding-left: 2vh;
+  }
+
+  .back {
+    background-color: #eaeaea;
+    min-height: 30vh;
+    margin-bottom: 5vh;
+  }
+}
